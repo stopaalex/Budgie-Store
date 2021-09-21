@@ -18,7 +18,7 @@ app.get('/get/data', (req, res) => {
 
 // serve up build
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve('/client/build/index.html'));
+  res.send('Hello to the db server');
 });
 
 const PORT = process.env.PORT || 5000;
