@@ -1,0 +1,22 @@
+{
+  "data": {
+    "income": 6573,
+    "expenses": [
+      { "name": "rent", "amount": 1150 },
+      { "name": "parking", "amount": 110 },
+      { "name": "car", "amount": 439 },
+      { "name": "insurance", "amount": 160 },
+      { "name": "phone", "amount": 67 },
+      { "name": "interwebs", "amount": 80 },
+      { "name": "splitwise", "amount": 230 },
+      { "name": "wedding save", "amount": 500 }
+    ],
+    "creditCardBal": 2027,
+    "SOM": "8/29/21",
+    "EOM": "9/28/21",
+    "spendPoints": [
+      "88.56",
+      "84.46"
+    ]
+  }
+}
