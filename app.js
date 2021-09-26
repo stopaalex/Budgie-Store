@@ -29,6 +29,30 @@ app.put('/put/data', (req, res) => {
   }
 })
 
+app.get('/test/pg', async (req, res) => {
+  try {
+    const url = 'postgres://behtoxtlkyrvpw:a159816172a8e6d1e4459f44f7585a0886ea68b241d937a0f6e64dbfccf1774c@ec2-52-206-193-199.compute-1.amazonaws.com:5432/d45deedn8d8ae9'
+    const { Client } = require('pg')
+    const client = new Client()
+    await client.connect()
+    const result = await client.query('SELECT * FROM budgie_Data;');
+    console.log(res.rows[0].message) // Hello world!
+    await client.end()
+    res.send(JSON.stringify(result.rows))
+  } catch (err) {
+    res.send(JSON.stringify(err));
+  }
+
+  // const pg = require('pg');
+
+  // await pg.connect(url);
+  // const result = pg.query('SELECT * FROM budgie_data;');
+  // console.log(result);
+  // res.send('---');
+  // pg.connect(url, ())
+  
+})
+
 // serve up build
 app.get('*', (req, res) => {
   res.send('Hello to the db server');
